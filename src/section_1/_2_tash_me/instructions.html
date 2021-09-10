@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/instructions.css">
+    <title>Tash Me</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Tash Me</p>
+    </div>
+    <img src="../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/facePlusTash.png" alt="face plus tash" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+                <li>Choose a picture from "img" folder inside of _2_tash_me
+                </li>
+                <li>
+                    Open Tash_Me.pde using Processing.
+                </li>
+                <li>
+                    Drag the image you chose in Step 1 into your sketch
+                </li>
+                <li>
+                    On line 1 of your sketch, add the following code:
+                    <div style="width:100%;">
+                    <pre>PImage mustache;
+PImage friend;</pre>
+                    </div>
+                </li>
+                <li>
+                    Load your image by adding the following code to the setup() method:<br>
+                    <div style="width:100%;">
+                    <pre>friend = loadImage("friend.jpg");
+size(800, 600);
+friend.resize(width,height);
+</pre>
+                    </div>
+                </li>
+
+                <li>
+                    Change “friend.jpg” in the above code so that it matches the name of your image.
+                </li>
+                <li>
+                    At the beginning of the draw() method, set “friend” as your background using the background()
+                    method.
+                </li>
+
+                <img src="img/face9.jpg" class="stepImage">
+                <li>
+                    Run the program. Is your image displayed in the sketch? If not, get this part working
+                    before you move on to the next step.</p>
+                </li>
+                <li>
+                    Find "mustache.png" in the from "img" folder inside of _2_tash_me, and drag and drop it into your
+                    processing window.
+                </li>
+                <li>
+                    In the setup() method, load the mustache image using the following code:
+                </li>
+                <div style="width:100%;">
+                <pre> mustache = loadImage("mustache.png");</pre>
+                </div>
+                <li>
+                    Change “mustache.png” from the previous step so that it matches the name of your image and
+                    resize it if you need to (see step 5 for a hint on how to resize an image).
+                </li>
+                <li>
+                    In the draw() method, add the mustache to your sketch using:
+                </li>
+                <div style="width:100%;">
+                <pre>image(mustache, 150, 400);</pre>
+                </div>
+                <img src="img/facePlusTash.png" class="stepImage">
+                <li>
+                    Run the program. Is your mustache displayed on the face? If not, get this part
+                    working before you move on to the next step.
+                </li>
+                <li>
+                    Change the previous line of code so that the mustache moves with your mouse! Hint: Processing
+                    gives you <span style="color:tan">mouseX</span> and <span style="color:tan">mouseY</span> variables to help you do
+                    this.
+                </li>
+                <li>
+                    Use an if statement to make the mustache appear only when the mouse is pressed. Hint: Processing
+                    gives you a <span style="color:tan">mousePressed</span> variable to help you do this.
+                </li>
+                <li>
+                    Inside of your if statement, redraw the background before you draw the mustache. This will make
+                    it so that only one mustache appears at a time.
+                </li>
+                <li><u>EXTRAS</u>
+                    <p class="normal">
+                    <ul>
+                        <li>
+                            Add or subtract a number from mouseX and mouseY when drawing the mustache so the middle
+                            appears
+                            exactly where you click the mouse.
+                        </li>
+                        <li>
+                            Draw a hat on your image when the right mouse button is clicked using:
+                            <div style="width:100%;">
+                            <pre>if (mouseButton == RIGHT){
+}</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</ol>
+</div>
+</div>
+</div>
+<div id="footer">
+    <img src="../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

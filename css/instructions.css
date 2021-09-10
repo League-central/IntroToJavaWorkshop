@@ -1,0 +1,133 @@
+#body{
+    margin: 0;
+    min-height: 100vh;
+}
+
+#header{
+    background-color: rgb(88, 197, 254 );
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    font-family: Monaco, monospace;
+    padding: 0;
+}
+
+#header p{
+    padding-top:1em;
+    margin: 0;
+}
+
+#bodyBackgroundColor{
+    background-color: rgb(3, 194, 204);
+}
+
+#instructionsImage{
+    max-width: 100%;
+}
+
+#gradientBody{
+    margin: 0;
+    background-image: linear-gradient(rgb(3, 194, 204), rgb(0, 131, 163));
+    height: 100%;
+    padding-bottom: 6em;
+}
+
+#stepsBody{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Monaco, monospace;
+}
+
+#stepsBody h2 {
+    color: rgb(226, 231, 222);
+}
+#stepsBody p {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+}
+
+#stepsBody ol {
+    padding: 0 1.5em;
+    margin: 0;
+    font-size: 1.25em;
+    color: rgb(1, 63, 66);
+}
+
+#stepsBody li {
+    padding: 1em;
+}
+
+#stepsBody ul li {
+    padding: 0em;
+}
+
+#stepsBody ul ol li {
+    margin: .25em;
+    font-size: .75em;
+}
+
+#stepsBody pre {
+    display: inline-block;
+    background-color: tan;
+    color: darkblue;
+    font-size: 1.1em;
+    border-radius: 20px;
+    padding: 1em 1.5em;
+}
+
+.stepImage {
+    float: left;
+    width: 5em;
+    margin-right: 5.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#recipeImage {
+    float:right;
+    width: 10em;
+    margin: 1em;
+    margin-right: 10%;
+    margin-top: 10%;
+    border: 5px solid rgb(87, 152, 194);
+}
+
+#footer{
+    background-color: rgb(0, 131, 163);
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 -1em;
+}
+
+#footerTreasureChest{
+    float: left;
+    height: 7em;
+    margin-left: 3em;
+}
+
+#footerCoral{
+    height: 6em;
+    float:right;
+    padding-top: .75em;
+}
+
+#footerFish1{
+    height: 2em;
+    float:left;
+    margin-right: 1em;
+    margin-left: 4em;
+}
+#footerFish2{
+    height: 2em;
+    float:left;
+    margin-left: 3em;
+    margin-top: 1em;
+}
+
+#footerFish3{
+    height: 1em;
+    float:right;
+    margin-right: 3em;
+}
