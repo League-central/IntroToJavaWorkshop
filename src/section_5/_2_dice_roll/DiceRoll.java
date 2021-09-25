@@ -22,8 +22,7 @@ public class DiceRoll implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//This method is called when you click the button
-
+		
 		// 1. Instead of 0, make randomChoice equal to a random number between 1 and 6
 		int randomChoice = 0;
 

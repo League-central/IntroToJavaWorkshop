@@ -1,7 +1,9 @@
 /*
  * 
  * 
+ * 
  * RUN THE PROGRAM AND HAVE FUN DRAWING!!!
+ *
  *
  *
  */

@@ -29,14 +29,9 @@ public class RockPaperScissors extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        //1. Run the program and click an image to make a choice. Notice that the computer always makes the same choice.
-
-        //2. Change the value of opponentSelection to be a random number between 0 and 2;
-        //   Don't forget to create a Random object.
+        // Change the value of opponentSelection to be a random number between 0 and 2.
 
         int opponentSelection = 0;
-
-        //3. Run the program again. Is the result different?
 
         int selection = 0;
 

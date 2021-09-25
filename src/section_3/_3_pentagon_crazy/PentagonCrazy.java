@@ -11,16 +11,15 @@ public class PentagonCrazy {
 		
 		// SPEED. Make the robot go at maximum speed (100)
 		
-		// COLOR. Set the pen to a color that you like for the shape:   setPenColor(Color.BLUE);
+		// COLOR. Set the pen to a color that you like for the shape
 		
 		// NUMBER OF SIDES. Make an int variable for the number of sides the shape will have.
-		//                  Hint: its called PentagonCrazy
 		
 		// TURN ANGLE. Make another int variable for the angle the robot must turn.
-		//             Hint: Divide 360 by the number of sides the shape has to get the angle.
+		//             Hint: Divide 360 by the number of sides
 		
 		// COUNT. Make another int variable to count how many times the loop has repeated
-		//        Set its start value to zero.
+		//        Set its start value to 0
 		
 		// LOOP. Start a while loop to repeat the DRAW, TURN, and INCREASE COUNT code 5 times.
 		
@@ -47,14 +46,13 @@ public class PentagonCrazy {
 		// CRAZY. Change your TURN to be the amount in your angle variable + 1
 		
 		// Run the program.
-		// Do you have a crazy pentagon? Check the pattern against the picture in 
-		// the recipe. If it matches, you are done!
+		// Do you have a crazy pentagon? Nice job!
 		
 		// VARIATIONS:
-		// *12. make the pattern really huge
-		// *13. randomize the color of the pattern
-		// *14. change the turn amount
-		// *15. experiment with different shapes
+		// * make the pattern really huge
+		// * randomize the color of the pattern
+		// * change the turn amount
+		// * experiment with different shapes
 
 	}
 }
