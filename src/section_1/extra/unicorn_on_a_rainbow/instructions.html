@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../css/instructions.css">
+    <title>Unicorn On A Rainbow</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Unicorn On A Rainbow</p>
+    </div>
+    <img src="../../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <h2>Steps:</h2>
+            <ol>
+
+                <li>Find a photo of a rainbow:<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;a. Find an image on google<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;b. Right click on the image and select &quot;Save Image As&quot;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;c. Rename your image something short (e.g. &quot;rainbow&quot;)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;d. Save the image on your Desktop<br>
+                </li>
+
+                <li>Find the starter code for this recipe and open it using Processing. Hint: the file name is 
+                    Unicorn_On_Rainbow.pde and it should be in the extra folder. 
+                   
+                </li>
+
+                <li>Drag the image you saved in Step 1 from the Desktop and drop it into your sketch
+                  
+                </li>
+
+                <li>On line 1 of your sketch, add the following code:
+                    <div style="width:100%">
+                    <pre>
+PImage rainbow;
+PImage unicorn;</pre>
+                    </div>
+                </li>
+
+                <li>Load your image by adding the following code to the setup() method:
+                    <div style="width:100%">
+                    <pre>
+rainbow = loadImage("rainbow.jpg");
+size(800, 600);
+rainbow.resize(width,height);</pre>
+                    </div>
+                </li>
+
+                <li>Change “rainbow.jpg” in the above code so that it matches the name of your image.
+                </li>
+
+                <li>At the beginning of the draw() method, set “rainbow” as your background using the background() method.
+                </li>
+
+                <img src="img/rainbow_.jpg" style="width: 200px; height=160px; margin: 0px 20px"  align="left">
+                <br>
+                <ul><u>TESTING</u><br>Run the program. Is your image displayed in the sketch? <br>If not, get this part working before you move on to the next step.</ul>
+                <br><br>
+
+                <li>Now find an image of a unicorn.  Pick one that has a transparent background.  Search for “unicorn transparent” or “unicorn png”.  Follow steps a - d under step 1, then drag and drop it onto your sketch.
+                </li>
+
+                <li>In the setup()method, load the unicorn image using the following code:
+                    <div style="width:100%">
+                <pre>
+unicorn = loadImage("unicorn.png");</pre>
+                    </div>
+                </li>
+                <li>Change “unicorn.png” from the previous step so that it matches the name of your image and resize it if you need to (see step 5 for a hint on how to resize an image). 
+                </li>
+
+                <li>In the draw() method, add the unicorn to your sketch using:
+                    <div style="width:100%">
+                    <pre>
+image(unicorn, 150, 400);</pre>
+                    </div>
+                </li>
+                
+                <img src="img/unicornOnRainbow.png" style="width: 200px; margin: 0px 20px" align="left">
+                <br>
+                <ul><u>TESTING</u><br>Run the program. Is your unicorn displayed on the rainbow? If not, get this part working before you move on to the next step.</ul> 
+                
+                <br><br>
+                <li>Change the previous line of code so that the unicorn moves with your mouse! Hint: Processing gives you <span style="color:tan">mouseX</span> and <span style="color:tan">mouseY</span> to help you do this.
+                </li>
+
+                <li>Use an if statement to make the unicorn appear only when the mouse is pressed.  Hint: Processing gives you <span style="color:tan">mousePressed</span> to help you do this.
+                </li>
+                <li>Inside of your if statement, redraw the background before you draw the unicorn.  This will make it so that only one unicorn appears at a time.
+                </li>
+                <li><u>EXTRAS</u><br>Add or subtract a number from mouseX and mouseY when drawing the unicorn so the middle appears exactly where you click the mouse.
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</ol>
+</div>
+</div>
+</div>
+<div id="footer">
+    <img src="../../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

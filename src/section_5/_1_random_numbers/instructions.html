@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/instructions.css">
+    <title>Random Numbers</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Random Numbers</p>
+    </div>
+    <img src="../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/random.jpeg" alt="random image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+                <li>Inside the main method, create a Random.
+                    <div style="width:100%">
+                        <pre>Random randy = new Random();</pre>
+                    </div>
+                </li>
+                <li>Use this Random to create a random number.
+                    <div style="width:100%">
+                        <pre>int number = randy.nextInt();</pre>
+                    </div>
+                </li>
+                <li>Print out the random number.
+                    <div style="width:100%">
+                        <pre>System.out.println("Random number is " + number);</pre>
+                    </div>
+                </li>
+                <li>Get another number from 0 to 100, and print it out.
+                    <div style="width:100%">
+                        <pre>int numberLessThan100 = randy.nextInt(101);
+System.out.println("Random number from 0 to 100 is " + numberLessThan100);</pre>
+                    </div>
+                </li>
+                <li>Get a third number between 100 and 110, and print it out.
+                    <div style="width:100%">
+                        <pre>int low = 100;
+int high = 110;
+int randomBetweenLowAndHigh = randy.nextInt((high-low)+1)+low;
+System.out.println("Random number from 100 to 110 is " + randomBetweenLowAndHigh);</pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <img src="../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

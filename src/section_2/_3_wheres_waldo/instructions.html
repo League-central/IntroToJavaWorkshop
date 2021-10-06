@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/instructions.css">
+    <title>Where's Waldo</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Where's Waldo</p>
+    </div>
+    <img src="../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/waldo.png" alt="googly eyes image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+
+                <li>Open WheresWaldo.pde using Processing.</li>
+
+                <li>Choose a puzzle image from the "img" folder, then drag and drop it into your
+                    processing window
+                </li>
+
+                <li>On line 2 of your sketch declare a variable for the image:
+                    <div style="width:100%;">
+                    <pre>PImage puzzle;
+</pre>
+                    </div>
+                </li>
+                <li>In your setup() method, import your image using the following code:
+                    <div style="width:100%;">
+                    <pre>
+puzzle = loadImage(“puzzle.jpg”);
+</pre>
+                    </div>
+                </li>
+
+                <li>Set the size of your sketch and the size of your image to be the same by entering the following code
+                    in the setup() method.
+                    <div style="width:100%;">
+                    <pre>size(800,600);
+puzzle.resize(width,height);
+</pre>
+                    </div>
+                </li>
+                <li>Use the solutions within the "img/solutions" folder to locate Waldo in the puzzle. He
+                    is labeled with the number "1".
+                </li>
+
+                <li>You now need to imagine a square around Waldo, and click on the corners of
+                    your imaginary square while recording the x and y location of each corner. Use the code
+                    below to print out where you click.
+                    <div style="width:100%;">
+                    <pre>if(mousePressed){
+    println("Mouse’s x-position: " + mouseX + "\n" +
+     "Mouse’s y-position: " + mouseY + "\n");
+}   </pre>
+                    </div>
+                </li>
+                <li>To see if we clicked on Waldo, use this code and change the values to the numbers you found in step 7.
+                    <div style="width:100%;">
+                    <pre>if(mousePressed){
+   if(mouseX > minimumXValue && mouseX < maximumXValue){
+        if(mouseY > minimumYValue && mouseY < maximumYValue){
+            showMessageDialog(null, "You Found Waldo!");
+        }
+    }
+}   </pre>
+                    </div>
+                </li>
+                <li>
+                    EXTRA: Repeat the steps above to alert users when they identify additional characters within the puzzle.
+                    Depending on the puzzle you selected, additional characters are labeled with the following numbers:
+                    <ul>
+                        <li>Woof the dog...'s tail (#2)</li>
+                        <li>Wilma, Waldo's girlfriend (#3)</li>
+                        <li>Whitebeard the Wizard (#4)</li>
+                        <li>Odlaw (or anti-Waldo) (#5)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <img src="../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

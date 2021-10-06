@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../css/instructions.css">
+    <title>Logical Dot</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Logical Dot</p>
+    </div>
+    <img src="../../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/LogicalDot.png" alt="logical dot image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+
+                <li>Find the starter code for this recipe and open it using Processing (Hint: the file name is
+                    Logical_Dot.pde) and it should be in the section_1 folder.
+                </li>
+
+                <li>In the setup() method, set the size of your sketch to 600 by 600
+                    <div style="width:100%">
+                <pre>
+size(600,600);</pre>
+                    </div>
+                </li>
+
+                <li>Draw an ellipse inside the draw() method.
+                    <div style="width:100%">
+                <pre>
+ellipse(300, 300, 100, 100);
+}</pre>
+                    </div>
+                </li>
+
+                <li>Make your ellipse a nice color.
+                    <div style="width:100%">
+                <pre>
+fill(52, 213, 235);</pre>
+                    </div>
+                </li>
+
+                <li>In the draw() method, make it so that if the mouse is pressed the color of the ellipse changes.
+
+                    <div style="width:100%">
+                <pre>
+if (mousePressed) {
+        // fill with one color here
+} else {
+        // fill with a different color here
+}</pre>
+                    </div>
+                </li>
+                <li>Create a variable on line 1 (outside of the setup() and draw() methods) that will old the x-position
+                    of
+                    your dot
+                    <div style="width:100%">
+                <pre>
+int x = 300
+}</pre>
+                    </div>
+                </li>
+                <li>
+                    Update the ellipse() method to use to x variable you created as the x-position for the ellipse
+                </li>
+                <li>
+                    in the if-statement you created above, increase the value of x when the mouse is pressed
+                    <div style="width:100%">
+                <pre>
+x = x + 1;</pre>
+                    </div>
+                </li>
+                <li>
+                    If the dot moves completely off of the screen, make the dot reenter on the left side of the screen
+                    <div style="width:100%">
+                <pre>
+if(x>=600+50){
+    x = 0 - 50;
+}</pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</ol>
+</div>
+</div>
+</div>
+<div id="footer">
+    <img src="../../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

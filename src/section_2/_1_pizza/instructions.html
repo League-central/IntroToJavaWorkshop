@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/instructions.css">
+    <title>Pizza</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Pizza</p>
+    </div>
+    <img src="../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/pizza.jpeg" alt="pizza image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+                <li>Open Pizza.pde using Processing.
+                </li>
+                <li>Set your canvas size in the setup method.
+                    <div style="width:100%;">
+                    <pre>
+size(width, height);
+</pre>
+                    </div>
+                </li>
+                <li>Draw a biscuit-colored ellipse for the pizza base.
+                    Do this in the setup method.
+                    <div style="width:100%;">
+                    <pre>
+fill(color);
+ellipse(x, y, width, height);
+</pre>
+                    </div>
+                </li>
+                <li>
+                    Using the same x and y positions, draw a slightly smaller red ellipse for sauce.
+                </li>
+                <li>
+                    Using the same x and y positions, draw an even smaller yellow ellipse for the cheese.
+                </li>
+                <li>Choose a topping image from the "img" folder, then drag and drop it into your
+                    processing window.
+                <li>Make a PImage variable for each type of topping at the top of the sketch:
+                    <div style="width:100%;">
+                        <pre>PImage pepperoni;</pre>
+                    </div>
+                </li>
+                <li>Load the topping image (in the setup method):
+                    <div style="width:100%;">
+                        <pre>pepperoni = loadImage("pepperoni.png");</pre>
+                    </div>
+                </li>
+                <li>In the draw method, use the image command to draw the topping somewhere on your pizza:
+                    <div style="width:100%;">
+                        <pre>image(pepperoni,200,200);</pre>
+                    </div>
+                </li>
+                <li>In the setup method, resize your topping image to make it fit properly.
+                    <div style="width:100%;">
+                        <pre>pepperoni.resize(30, 30);</pre>
+                    </div>
+                </li>
+                <li>Repeat the image command to add the topping to your pizza multiple times.</li>
+                <li>Repeat steps 7-10 to add another topping to your sketch</li>
+
+                <li>Use <span style="color:tan">mousePressed</span>, <span style="color:tan">mouseX</span>, and <span
+                        style="color:tan">mouseY</span> to add the new topping to your pizza when and where
+                    the user clicks the mouse.
+                    <div style="width:100%;">
+                        <pre>if(mousePressed){
+    image(pepperoni,mouseX,mouseY);
+}</pre>
+                    </div>
+                </li>
+
+                <li>Make sure you SAVE YOUR CODE when you are done.
+                </li>
+
+
+                <li>EXTRA
+                    <ul>
+                        <li>Add a different topping with the right mouse click.
+                        <div style="width:100%;">
+                    <pre>
+if (mousePressed &amp;&amp; (mouseButton == RIGHT)) {}
+</pre>
+                        </div>
+                        </li>
+                        <li>Use pizzaBox.png in the "img" folder to put your pizza in a box.
+                            <div style="width:100%;">
+                    <pre>
+PImage pizzaBox = loadImage("pizzaBox.png");     //in setup method
+pizzaBox.resize(width, height);      //to match your canvas size
+background(pizzaBox);       //in setup method
+</pre>
+                            </div>
+                        </li>
+                    </ul>
+
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <img src="../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/instructions.css">
+    <title>Greeter</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Greeter</p>
+    </div>
+    <img src="../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="./img/greeter.png" alt="googly eyes image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+                <li>Inside of the main() method, print "Hello World!" to the console.
+                    <div style="width:100%">
+                        <pre>System.out.println("Hello World!");</pre>
+                    </div>
+                </li>
+                <li>Now ask the user for their name.
+                    <div style="width:100%">
+                        <pre>String input = JOptionPane.showInputDialog("What is your name?");</pre>
+                    </div>
+                </li>
+                <li>Join their name to the end of this greeting.
+                    <div style="width:100%">
+                        <pre>JOptionPane.showMessageDialog(null,"Hello "+input);</pre>
+                    </div>
+                </li>
+                <li>If the user types in your name, tell them they are the coolest person ever.  If they enter anything else,
+                    tell them that you hope they have a nice day.
+                    <div style="width:100%">
+                        <pre>if(input.equals("Matt")){
+    JOptionPane.showMessageDialog(null,"You are the coolest person ever!");
+}
+else{
+    JOptionPane.showMessageDialog(null,"I hope you have a nice day :)");
+}</pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <img src="../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>

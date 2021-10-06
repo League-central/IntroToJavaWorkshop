@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../css/instructions.css">
+    <title>Fish Feeder</title>
+</head>
+<body id="body">
+<div id="bodyBackgroundColor">
+    <div id="header">
+        <p>Fish Feeder</p>
+    </div>
+    <img src="../../../../img/instructionsImage.png" alt="beach pixel art" id="instructionsImage">
+    <div id="gradientBody">
+        <div id="stepsBody">
+            <img src="img/FishFeeder.png" alt="googly eyes image" id="recipeImage">
+            <h2>Steps:</h2>
+            <ol>
+                <li>Open FishFeeder.pde using Processing
+                </li>
+                <li>In the setup() method, set your canvas size.
+                    <div style="width:100%;">
+                    <pre>size(600,600);
+</pre>
+                    </div>
+                </li>
+                <li>At the top of your program (on line 1) create variables for the location of the fish food.
+                    <div style="width:100%;">
+                    <pre>int foodX = 100;
+int foodY = 20;</pre>
+                    </div>
+                </li>
+                <li>
+                    In the draw() method, make the background the color of water
+                    <div style="width:100%;">
+                    <pre>background(141,233,237);
+</pre>
+                    </div>
+
+                </li>
+                <li>
+                    Draw an ellipse to represent a piece of fish food, using the variables from step 3 as the x and y
+                    positions.
+                </li>
+                <div style="width:100%;">
+                    <pre>fill(212, 152, 42);
+noStroke();
+ellipse(foodX, foodY, 30, 30);
+</pre>
+                </div>
+
+                <li>
+                    In the draw() method, update the value of foodY to make it fall down the screen
+                    <div style="width:100%;">
+                    <pre>foodY = foodY + 1;
+</pre>
+                    </div>
+                </li>
+
+                <li>
+                    Using an if-statement and the build-in <span style="color:tan">height</span> variable, reset the
+                    value
+                    of foodY when it reaches the bottom of the screen
+                </li>
+
+                <li>
+                    When the food leaves the screen, use the code below to set foodX to a random value.
+                    <div style="width:100%;">
+                        <pre>foodX = (int) random(width-20);</pre>
+                    </div>
+                </li>
+
+                <li>
+                    Add this drawFish() method at the very bottom of your sketch:
+                    <div style="width:100%;">
+                        <pre> void drawFish(){
+      noStroke();
+      fill(255,255,255);
+      ellipse(mouseX-17,mouseY-17,20,20); //back side eye
+      fill(255,200,88);
+      ellipse(mouseX,mouseY,90,50); //body
+      triangle(mouseX+30,mouseY,mouseX+70,mouseY+30,mouseX+70,mouseY-30); //tail
+      stroke(0);
+      triangle(mouseX,mouseY,mouseX+15,mouseY+10,mouseX+15,mouseY-10); //side fin
+      noStroke();
+      fill(255,200,88);
+      ellipse(mouseX,mouseY,15,15); //side fin cover
+      noStroke();
+      fill(255,255,255);
+      ellipse(mouseX-25,mouseY-15,20,20); //front eye
+      fill(0,0,0);
+      ellipse(mouseX-25,mouseY-15,5,5); //pupil
+      fill(141,233,237);
+      ellipse(mouseX-45,mouseY,25,25); //mouth
+}</pre>
+                    </div>
+                </li>
+
+                <li>
+                    After you call background() inside of your draw() method, use this code to draw the fish:
+                    <div style="width:100%;">
+                    <pre>drawFish();</pre>
+                    </div>
+                </li>
+
+                <li>Above the setup() method, add an int variable to hold the score.
+                    <div style="width:100%;">
+                        <pre>int score = 0;</pre>
+                    </div>
+                </li>
+
+                <li>
+                    Add this checkCatch() method to the bottom of your program.
+                <div style="width:100%;">
+                    <pre>void checkCatch(){
+      if(foodX &gt; mouseX &amp;&amp; foodX &lt; mouseX+70){
+           if(foodY &gt; mouseY-17 &amp;&amp; foodY &lt;mouseY+30){
+              score++;
+              foodY = 20; //if the food was eaten, make more food fall from the top
+              foodX = (int) random(width-20);
+           }
+      }
+      else if (foodY &gt; height &amp;&amp; score &gt; 0){
+           score--;
+      }
+}</pre>
+                </div>
+                </li>
+                <li>
+                    Call the checkCatch() method inside your draw() method.
+                    <div style="width:100%;">
+                        <pre>checkCatch()</pre>
+                    </div>
+                </li>
+
+                <li>
+                    Show the score on the screen.
+                    <div style="width:100%;">
+                        <pre>fill(0, 0, 0);
+textSize(16);
+text("Score: " + score, 20, 20);</pre>
+                    </div>
+
+                </li>
+
+                <li>
+                    Decide how many points the user needs to score to win. Use an if-statement to check if they have reached
+                    that score, then stop drawing food and put up a message to tell the user they have won.
+                    <div style="width:100%;">
+                        <pre>textSize(16); //if it’s not big enough
+text("You Won!", 100, 100);</pre>
+                    </div>
+                </li>
+
+                <li>COOL VARIATIONS
+                    <ul>
+                        <li>Make the speed of the fish food increase as the score increases.</li>
+                        <li>Make some of the food poisonous (negative points if you catch it).</li>
+                        <li>Make the fish get fatter as he eats more food.</li>
+                        <li>Add text at the beginning to explain the game.</li>
+                        <li>Add messages to encourage the user to finish!</li>
+                        <li>Launch your fish using the following steps!
+                            <ol>
+                                <li>
+                                    Create a fishX variable at the top of your
+                                    sketch with your other variable.
+                                </li>
+                                <li>
+                                    Initialize the value of fishX to
+                                    "width-100". This will be used to keep track of the x location of the fish.
+                                </li>
+                                <li>
+                                    Replace all of the mouseX’s in your program
+                                    with your new fishX variable.
+                                </li>
+                                <li>
+                                    Your fish should now be stuck on the right
+                                    side of your screen, but still able to move up and down.
+                                </li>
+                                <li>
+                                    Create a boolean variable
+                                    at the top of our sketch with the other variables. A boolean variable has only two possible values: true
+                                    or false.
+                                    <div style="width:100%;">
+                        <pre>boolean launched = false;</pre>
+                                    </div>
+                                </li>
+                                <li>
+                                    In your draw() method, if the mouse is pressed, change the value of
+                                    launched to "true".
+                                </li>
+                                <li>
+                                    Create another if-statement in your draw() method to check if
+                                    launch is true.  If it is, then increase the value of fishX.
+                                </li>
+                                <li>
+                                    If the fishX is less than 0, set launched to "false" and fishX back to its original value.
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <img src="../../../../img/treasureChest.png" alt="beach pixel art" id="footerTreasureChest">
+    <img src="../../../../img/fish2.png" alt="beach pixel art" id="footerFish1">
+    <img src="../../../../img/fish1.png" alt="beach pixel art" id="footerFish2">
+    <img src="../../../../img/fish3.png" alt="beach pixel art" id="footerFish3">
+</div>
+</body>
+</html>
