@@ -1,16 +1,19 @@
 // 1. Run this empty program 
 
 // 2. Change the size command to be big enough for your picture.   
-  size (100,200);
-
+  size (400,500);
+fill(#FFC0CB);
 // 3. Change the ellipse command to draw an ellipse where you want.      
- ellipse(250,250, 100,100);
+
 
 // 4. Change the rect command to draw a rectangle where you want.
-rect(250,250, 100,100);
+//rect(200,175, 150,25);
+triangle(200,125,200,150,350,275);
+rect(150,125, 100,300);
+ellipse(200,125, 150,150);
 
 // 5. Change the fill command to pick a color for your next shape.  
-fill(#FFA850);
+
 
 // 6. Now use all these shapes and colors to draw a picture of your own design.
 
