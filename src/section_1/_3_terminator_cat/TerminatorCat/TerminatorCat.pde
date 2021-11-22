@@ -8,15 +8,15 @@ int y=0;
 void setup() {
 
 // 2. Change "cat.jpg" to match the name of the image you selected
-cat = loadImage("cat.jpg");
+cat = loadImage("terminatorCat.png");
 
 // 3. Set the size of the sketch.
-
+size (800,600);
 // 4. Resize the cat so it is the same size as the sketch
-
+cat.resize(width,height);
 // 5. DRAW CAT. Use the background() command to make the cat the background.
 //
-
+background (cat);
 
   }
 
@@ -24,7 +24,7 @@ void draw() {
 
 // 6. WHERE IS THE EYE? You can use this to find the x and y for the center of the cat's eyes.
       if(mousePressed){
-          println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
+          println(400 + mouseX + 50 + 300 + mouseY + 50);
       }
 
 // 7. Run the program and click on one of the cat's eyes.
