@@ -62,11 +62,11 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		int mouseColor = maze.getRGB(mouseX, mouseY);
 
 		//4. Print the mouseColor variable
-		System.out.println(mouseColor);
+//		System.out.println(mouseColor);
 		//5.  Run your program and move your mouse over the START COLOR.
 
 
-		int startColor=mouseColor;
+		int startColor=-5317;
 		//6. Change the value of this startColor variable to the number printed in the previous step.
 		
 
@@ -77,7 +77,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 
 		//7. Make a new int variable for the background color of the maze
-		int back = 0;
+		int back = -1499549;
 
 		//8. Run the program and move the mouse over the BACKGROUND COLOR.
 		
@@ -91,9 +91,13 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		Call the scare method - scare();
-
+			if(mouseColor==back) {
+				scare();
+			}
 			//13.  If the mouse is on the end color, pop up a message to tell them they won!
-			
+			else if(mouseColor==-7617718) {
+				System.out.println("great you won");
+			}
 
 
 
@@ -115,7 +119,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 			//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.
 			
 			//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file
-
+			playScarySound("standardScarySound.wav");
 
 		}
 		/**********  SHOW A PICTURE ***************/
@@ -125,6 +129,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//    Find a scary image and drop it into the "img" folder.
 
 		//    Use the showScaryImage method below with the name of your picture file.
+		showScaryImage("standardScaryPicture.jpg");
 
 
 	}
