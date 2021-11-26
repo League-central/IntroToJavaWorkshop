@@ -6,6 +6,8 @@ package section_5._2_dice_roll;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,18 +26,19 @@ public class DiceRoll implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		// 1. Instead of 0, make randomChoice equal to a random number between 1 and 6
-		int randomChoice = 0;
+		Random randy = new Random();
+		int randomChoice = randy.nextInt(6);
 
 		// 2. Fix the code below so that it displays the correct image
-		if (randomChoice == 0) {
+		if (randomChoice == 1) {
 			label.setIcon(oneImg);
-		} else if (randomChoice == 0) {
+		} else if (randomChoice == 2) {
 			label.setIcon(twoImg);
-		} else if (randomChoice == 0) {
+		} else if (randomChoice == 3) {
 			label.setIcon(threeImg);
-		} else if (randomChoice == 0) {
+		} else if (randomChoice == 4) {
 			label.setIcon(fourImg);
-		} else if (randomChoice == 0) {
+		} else if (randomChoice == 5) {
 			label.setIcon(fiveImg);
 		} else {
 			label.setIcon(sixImg);

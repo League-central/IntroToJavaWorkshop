@@ -62,12 +62,14 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		int mouseColor = maze.getRGB(mouseX, mouseY);
 
 		//4. Print the mouseColor variable
+		System.out.println(mouseColor);
 
 		//5.  Run your program and move your mouse over the START COLOR.
 
 
 		int startColor=0;
 		//6. Change the value of this startColor variable to the number printed in the previous step.
+		startColor = mouseColor;
 
 
 		// Leave this code here!
@@ -77,11 +79,13 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 
 		//7. Make a new int variable for the background color of the maze
+		int background = 0;
 
 
 		//8. Run the program and move the mouse over the BACKGROUND COLOR.
 		
 		//   Set the background variable from Step 7 to the number printed out.
+		background = mouseColor;
 
 
 
@@ -91,6 +95,8 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		Call the scare method - scare();
+			mouseColor = background;
+			System.out.println();
 
 			//13.  If the mouse is on the end color, pop up a message to tell them they won!
 			

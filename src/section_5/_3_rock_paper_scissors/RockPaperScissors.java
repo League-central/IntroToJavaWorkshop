@@ -6,6 +6,7 @@ package section_5._3_rock_paper_scissors;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -30,8 +31,8 @@ public class RockPaperScissors extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         // Change the value of opponentSelection to be a random number between 0 and 2.
-
-        int opponentSelection = 0;
+    	Random randy = new Random();
+        int opponentSelection = randy.nextInt(2);
 
         int selection = 0;
 
